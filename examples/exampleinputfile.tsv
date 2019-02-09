@@ -1,0 +1,4 @@
+/Path/To/Tsv/File/example_variants.annotated.tsv	A_sample_identifier_1	/Path/To/Final/Directory/One
+/Path/To/Tsv/File/example_variants.annotated.tsv	A_sample_identifier_2	/Path/To/Final/Directory/One
+/Path/To/Tsv/File/example_variants.annotated.tsv	A_sample_identifier_3   /Path/To/Final/Directory/Two
+/Path/To/Tsv/File/example_variants.annotated.tsv	A_sample_identifier_4   /Path/To/Final/Directory/Two	
