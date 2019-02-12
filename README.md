@@ -1,4 +1,4 @@
-# Move-Annotate-Merge: A .tsv file annotator for manual review generated from sequencing data analysis
+# Move-Annotate-Merge: Tab-separated values file (.tsv) manipulation for manual review generated from sequencing data analysis
 
 
 ## Introduction
@@ -7,7 +7,10 @@ Preparing sequencing data for manual review can be tedious, time-consuming and a
 
 ## Setting up the .tsv input file
 
-
+A prerequisite for getting useful output from this Haskell script is to setup a input .tsv file that it expects.<br/>
+Your input .tsv file should have the following structure:<br/><br/>
+`[/Path/To/Tsv/File/example_variants.annotated.tsv]\t[Corresponding_sample_identifier]\t[/Path/To/Final/Directory]`<br/><br/>
+There should be as many lines in this file as there are input .tsv files.
 
 
 
