@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Preparing sequencing data for manual review can be tedious, time-consuming and a user error-prone process.  This script, implemented in [Haskell](https://www.haskell.org/), transforms user-defined .tsv files containing variant annotation output into a single merged, annotated file easily searched and ready for downstream filtration.
+Preparing sequencing data for manual review can be tedious, time-consuming and a user error-prone process.  This script, implemented in [Haskell](https://www.haskell.org/), transforms user-defined .tsv files containing variant analysis output into a single merged, sample annotated file easily searched and ready for downstream filtration.
 
 ## Prerequisites
 
