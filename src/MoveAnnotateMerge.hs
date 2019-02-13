@@ -75,8 +75,6 @@ createFinalDirectory :: [String] -> IO String
 createFinalDirectory [] = return []
 createFinalDirectory (x:xs) = do
     _ <- SP.readProcess "mkdir" [x] []
-    _ <- SP.readProcess "chown" [":1024",(forwardSlashDetectorNM x)] []
-    _ <- SP.readProcess "chmod" ["=rwx,g+s",(forwardSlashDetectorNM x)] [] 
     createFinalDirectory xs
 
 --prepareCreateFinalDirectory -> This function will
@@ -149,6 +147,8 @@ variantsAnnotatedMover (x:xs) y = do
 variantsAnnotatedPipeline :: [[String]] -> Int -> IO ()
 variantsAnnotatedPipeline []     _ = return ()
 variantsAnnotatedPipeline (x:xs) y = do
+    --Give correct file permissions.
+    _ <- SP.readProcess "chmod" ["777",(forwardSlashDetectorNM (finalDirectoryGrabNM x) ++ currentFileNameGrabNM (variantsAnnotatedGrabNM x) ++ show y)] [] 
     --Read the current file.
     cfile <- SIO.readFile (variantsAnnotatedGrabNM x) 
     --Convert the singular String split by lines.
