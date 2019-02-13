@@ -32,6 +32,9 @@ You can call it using the **runghc** command provided by the GHC compiler as suc
 For maximum performance, please compile and run the source code as follows:<br/><br/>
 `ghc -O2 -o MAM MoveAnnotateMerge.hs`<br/><br/>
 `./MAM inputfile.tsv`<br/><br/>
+
+## Docker 
+
 A docker-based solution (Dockerfile) is availible in the corresponding [repository](https://github.com/Matthew-Mosior/Move-Annotate-Merge---Docker).  Currently, this Dockerfile assumes that you run docker interactively.
 
 ## Credits
