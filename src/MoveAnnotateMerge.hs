@@ -68,12 +68,6 @@ mapNotLast fn (x:xs) = fn x : mapNotLast fn xs
 
 {-MoveAnnotateMerge Specific Functions.-}
 
---prepareCreateFinalDirectory -> This function will
---prepare the final directorie(s) to be created.
-prepareCreateFinalDirectory :: [[String]] -> [String]
-prepareCreateFinalDirectory [] = []
-prepareCreateFinalDirectory xs = DL.nub (DL.map (DL.!! 2) xs)
-
 --createFinalDirectory -> This function will
 --create the final directories as provided by
 --the user.
@@ -81,7 +75,15 @@ createFinalDirectory :: [String] -> IO String
 createFinalDirectory [] = return []
 createFinalDirectory (x:xs) = do
     _ <- SP.readProcess "mkdir" [x] []
+    _ <- SP.readProcess "chown" [":1024",(forwardSlashDetectorNM x)] []
+    _ <- SP.readProcess "chmod" ["=rwx,g+s",(forwardSlashDetectorNM x)] [] 
     createFinalDirectory xs
+
+--prepareCreateFinalDirectory -> This function will
+--prepare the final directorie(s) to be created.
+prepareCreateFinalDirectory :: [[String]] -> [String]
+prepareCreateFinalDirectory [] = []
+prepareCreateFinalDirectory xs = DL.nub (DL.map (DL.!! 2) xs)
 
 --currentFileNameGrabNM -> This function will
 --grab the name of the current file in the list (normal).
