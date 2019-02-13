@@ -11,7 +11,7 @@ Preparing sequencing data for manual review can be tedious, time-consuming and a
 
 ## Installing required packages
 
-To install the peripheral packages **MoveAnnotateMerge.hs** requires, you can just call the following command assuming you have [cabal](https://www.haskell.org/cabal/), a package manager and build system for Haskell, installed on your system (it comes with the [Haskell Platform](https://www.haskell.org/platform/)).<br/><br/>
+To install the peripheral packages **MoveAnnotateMerge.hs** requires, you can call the following command assuming you have [cabal](https://www.haskell.org/cabal/), a package manager and build system for Haskell, installed on your system (it comes with the [Haskell Platform](https://www.haskell.org/platform/)).<br/><br/>
 `$ cabal install [packagename]`<br/><br/>
 
 **Required packages**
