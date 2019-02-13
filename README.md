@@ -7,8 +7,14 @@ Preparing sequencing data for manual review can be tedious, time-consuming and a
 
 ## Prerequisites
 
-**MoveAnnotateMerge.hs** assumes you have a the [GHC](https://www.haskell.org/ghc/) compiler and libraries installed that it imports.  The easiest way to do this is to download the [Haskell Platform](https://www.haskell.org/platform/).<br/><br/>
-**Required libraries**
+**MoveAnnotateMerge.hs** assumes you have a the [GHC](https://www.haskell.org/ghc/) compiler and packages installed that it imports.  The easiest way to do this is to download the [Haskell Platform](https://www.haskell.org/platform/).<br/><br/>
+
+## Installing required packages
+
+To install the peripheral packages **MoveAnnotateMerge.hs** requires, you can just call the following command assuming you have [cabal](https://www.haskell.org/cabal/), a package manager and build system for Haskell, installed on your system (it comes with the [Haskell Platform](https://www.haskell.org/platform/)).<br/><br/>
+`$ cabal install [packagename]`<br/><br/>
+
+**Required packages**
  - Data.List
  - Data.List.Split 
  - System.Process
