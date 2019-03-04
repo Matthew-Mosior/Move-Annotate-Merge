@@ -36,8 +36,8 @@ There should be as many lines in this file as there are input .tsv files.
 You can call it using the **runghc** command provided by the GHC compiler as such:<br/>
 `$ runghc MoveAnnotateMerge.hs inputfile.tsv`<br/><br/>
 For maximum performance, please compile and run the source code as follows:<br/><br/>
-`$ ghc -O2 -o MAM MoveAnnotateMerge.hs`<br/><br/>
-`$ ./MAM inputfile.tsv`<br/><br/>
+`$ ghc -O2 -o mam MoveAnnotateMerge.hs`<br/><br/>
+`$ ./mam inputfile.tsv`<br/><br/>
 
 ## Docker 
 
